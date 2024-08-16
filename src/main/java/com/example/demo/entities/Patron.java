@@ -24,7 +24,7 @@ public class Patron {
     @Email(message = "Email should be valid")
     String contactInfo;
 
-    @OneToMany(mappedBy = "patron",fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "patron", cascade = CascadeType.REMOVE)
     @JsonManagedReference("patron-record")
     Set<BorrowingRecord> borrowingRecords;
 

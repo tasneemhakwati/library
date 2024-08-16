@@ -25,7 +25,7 @@ public class Book {
     @NotEmpty(message = "Book author is required")
     String author;
 
-    @OneToMany(mappedBy = "book",fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "book", cascade = CascadeType.REMOVE)
     @JsonManagedReference("Book-record")
 
     List<BorrowingRecord> borrowingRecords;
