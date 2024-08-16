@@ -30,3 +30,4 @@ This documentation provides details on how to run the application, interact with
      - Service Layer Pattern: The application uses a Service Layer pattern where business logic is separated from the controllers, promoting a clean architecture.
      - Repository Pattern: The repository interfaces abstract the data access logic, making it easier to manage data and perform unit testing.
   6. Dependencies: - Spring Boot - Spring Data JPA - H2 Database - Spring Boot Starter Web - Spring Boot Starter Data Redis - Mockito (for testing)
+  7. There's a Postman collection provided with name "LibraryManagement.postman_collection.json", this collection includes all the endpoints, along with samples and responses which can help you during testing.
