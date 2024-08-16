@@ -5,6 +5,8 @@ import com.example.demo.entities.BorrowingRecord;
 import com.example.demo.entities.Patron;
 import com.example.demo.repository.BorrowingRecordRepository;
 import java.time.LocalDateTime;
+
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import java.time.temporal.ChronoUnit;
@@ -21,6 +23,7 @@ public class BorrowingService {
     }
     
 
+    @Transactional
     //Add Borrowing Record
     //Executed when a patron Borrows a book
     public BorrowingRecord addBorrowingRecord(Book book, Patron patron){
@@ -29,6 +32,7 @@ public class BorrowingService {
         return borrowingRecord;
     }
 
+    @Transactional
     //Update Borrowing Record
     //Executed when a patron returns a book
     public BorrowingRecord updateBorrowingRecord(BorrowingRecord borrowingRecord){

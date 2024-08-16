@@ -26,10 +26,12 @@ public class BookService {
         return this.bookRepository.findById(id);
     }
 
+    @Transactional
     public Book addBook(Book book){
         return this.bookRepository.save(book);
     }
 
+    @Transactional
     public Book updateBook(Long id, Book book){
         Book p = this.bookRepository.findById(id)
                 .orElseThrow(() -> new BookNotFoundException(id));
@@ -40,6 +42,7 @@ public class BookService {
         return p;
     }
 
+    @Transactional
     public void deleteBook(Long id){
         this.bookRepository.deleteById(id);
     }
